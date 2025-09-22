@@ -36,7 +36,6 @@
 
     .default-text {
         text-align: justify;
-       
     }
 
     .default-text span {
