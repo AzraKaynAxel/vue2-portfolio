@@ -15,4 +15,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+
+  // server config permet de dire d'écouter sur toutes les interfaces réseau (contrecarre le blocage de NordVPN).
+  // server config allows you to listen on all network interfaces (counteracts NordVPN blocking).
+  server: {
+    host: true,
+    port: 5173,
+  }
 })
