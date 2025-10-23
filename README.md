@@ -13,7 +13,7 @@
 
     (Ajout de la balise " " " " dans l'index afin de pouvoir récupérer les icons)
     (Ajout des icons des technos que j'utilise. Première création)
-
+    
 ## Page My Experience
 
  ### config in vite.config.js
