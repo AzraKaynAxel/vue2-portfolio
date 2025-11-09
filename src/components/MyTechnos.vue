@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div id="skills">
+    <section id="skills">
         <h2 class="text-highlight-1 section-title ">Technos utilisées</h2>
         <div id="icons-list">
             <div class="techno-container"><i class="techno-icon devicon-php-plain colored"></i></div>
@@ -17,7 +17,7 @@
             <div class="techno-container"><i class="techno-icon devicon-git-plain colored"></i></div>
             <div class="techno-container"><i class="techno-icon devicon-jquery-plain colored"></i></div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>

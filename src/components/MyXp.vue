@@ -8,15 +8,19 @@
     let experiences = ref([
         {
             title: "Groupe Royer",
-            date: "15 Avril 2024 / 07 Juin 2024",
+            date: "15 Avril 2024 - 07 Juin 2024",
+            poste: "Développeur Web (Stage)",
             lines: [
                 "Développement logiciel",
                 "Gestion de Projets",
+                "Travail en équipe Agile",
+                "Utilisation de CMS"
             ],
         },
         {
             title: "Formation DWWM, L'ENI",
-            date: "Octobre 2023 /  Avril 2024",
+            date: "Octobre 2023 - Avril 2024",
+            poste: "Développeur Web et Web Mobile",
             lines: [
                 "Développement de site Web",
                 "Gestion de projets en équipe",
@@ -24,8 +28,9 @@
             ], 
         },
         {
-            title: "Educateur Adjoint d'Angers",
-            date: "Novembre 2022 / Août 2023",
+            title: "Mairie d'Angers",
+            date: "Novembre 2022 - Août 2023",
+            poste: "Educateur Adjoint",
             lines: [
                 "Construction de projet éducatif et en équipe",
                 "Accompagnement d'enfants en difficulté",
@@ -33,15 +38,17 @@
         },
         {
             title: "Intérime",
-            date: "Novembre 2021 / Juillet 2022",
+            date: "Novembre 2021 - Juillet 2022",
+            poste: "Poste Divers",
             lines: [
                 "Diverse entreprise ",
                 "Diverse mission",
             ],
         },
         {
-            title: "Opticien-Lunettier",
-            date: "Septembre 2018 / Août 2020",
+            title: "Optimiz",
+            date: "Septembre 2018 - Août 2020",
+            poste: "Opticien-Lunettier",
             lines: [
                 "Recherche des besoins du client",
                 "Conseil et vente de produits selon les clients",
@@ -59,7 +66,7 @@
 </script>
 
 <template>
-    <section id="xp-containe">
+    <section id="xp-contain">
         <h2 class="text-highlight-1 section-title">Expériences</h2>
         <div id="xp-container">
             <div id="left-cards">
@@ -80,7 +87,7 @@
                     </div>
                 </div>
                 <div id="company-card">
-                    <div :class="activeBloc === 1 ? 'active' : ''" class="company fw600" @click="showXP(1)">Formation avec L'ENI                
+                    <div :class="activeBloc === 1 ? 'active' : ''" class="company fw600" @click="showXP(1)">{{ experiences[1].title }}             
                         <div class="tiles">
                             <div class="tile tile-1"></div>
                             <div class="tile tile-2"></div>
@@ -96,7 +103,7 @@
                     </div>
                 </div>
                 <div id="company-card">
-                    <div :class="activeBloc === 2 ? 'active' : ''" class="company fw600" @click="showXP(2)">Educateur Adjoint d'Angers
+                    <div :class="activeBloc === 2 ? 'active' : ''" class="company fw600" @click="showXP(2)">{{ experiences[2].title }}
                         <div class="tiles">
                             <div class="tile tile-1"></div>
                             <div class="tile tile-2"></div>
@@ -112,7 +119,7 @@
                     </div>
                 </div>
                 <div id="company-card">
-                    <div :class="activeBloc === 3 ? 'active' : ''" class="company fw600" @click="showXP(3)">Intérime
+                    <div :class="activeBloc === 3 ? 'active' : ''" class="company fw600" @click="showXP(3)">{{ experiences[3].title }}
                         <div class="tiles">
                             <div class="tile tile-1"></div>
                             <div class="tile tile-2"></div>
@@ -128,7 +135,7 @@
                     </div>
                 </div>
                 <div id="company-card">
-                    <div :class="activeBloc === 4 ? 'active' : ''" class="company fw600" @click="showXP(4)">Opticien-Lunettier
+                    <div :class="activeBloc === 4 ? 'active' : ''" class="company fw600" @click="showXP(4)">{{ experiences[4].title }}
                         <div class="tiles">
                             <div class="tile tile-1"></div>
                             <div class="tile tile-2"></div>
@@ -151,6 +158,8 @@
             </div>
             -->
             <div id="right-cards">
+                <h2 class="text-post">{{ experiences[activeBloc].poste }}</h2>
+                <div class="text-date">{{ experiences[activeBloc].date }}</div>
                 <ul>
                     <li v-for="line in experiences[activeBloc].lines" :key="line">
                         {{ line }}
@@ -167,10 +176,14 @@
         align-items: center;
         justify-content: space-around;
         position: relative;
+        max-width: 1200px;
+        width: 100%;
     }
 
     #left-cards {
         flex: 0 0 300px;
+        display: flex;
+        flex-direction: column;
     }
     
     .company {
@@ -236,9 +249,7 @@
         .tile-9 { top: 32.5%; left: 50%; height: 22.5%; width: 27.5%; animation-delay: -6s; }
         .tile-10 { top: 32.5%; left: 77.5%; height: 22.5%; width: 22.5%; animation-delay: -2s; }
     }
-
-    
-
+ 
     .company:hover  {
        box-shadow: 0 0 1em #e27e7f;
        border-radius: 10px;
@@ -257,7 +268,8 @@
         background-color: rgba(24, 24, 27, 0.781);  /* Même que .company pour la cohérence */
         border-radius: 10px;
         margin-left: 15%;
-        padding: 1em;
+        padding: 1em; 
+        min-height: 400px;
 
         ul {
             list-style: none;
@@ -275,6 +287,16 @@
                         
                     }
             }
+        }
+
+        .text-post {
+            font-weight: bolder;
+            margin-left: 3rem;
+        }
+
+        .text-date {
+            font-weight: lighter;
+            margin-left: 3rem;
         }
 
     }

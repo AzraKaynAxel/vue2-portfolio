@@ -6,12 +6,12 @@
 </script>
 
 <template>
-    <div>
+    <section>
         <PageTitle />
         <AboutMe />
         <MyTechnos />     
         <MyXp /> 
-    </div>
+    </section>
 </template>
 
 <style scoped>
