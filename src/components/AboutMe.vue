@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div id="about-me">
+    <section id="about-me">
         <h2 class="text-highlight-1 section-title">Qui suis-je ?</h2>
         <p class="default-text">
             <span class="text-highlight-2">Développeur Web</span> depuis octobre 2023 et diplômé en juillet 2024, <span class="text-highlight-2">Full-Stack</span>. <br/>
@@ -26,7 +26,7 @@
                 <li>GitHub</li>
             </ul>
         </p>
-    </div>
+    </section>
 </template>
 
 <style>

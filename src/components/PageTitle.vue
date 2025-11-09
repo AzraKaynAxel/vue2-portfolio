@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div id="top-line">
+    <section id="top-line">
         <img id="profile-img" src="../assets/myPicture.png" alt="my picture" width="300px" height="300px"/> 
         <div id="line">
             <p>Je suis <span class="text-highlight-1">Axel Hayalian</span>, 
@@ -13,7 +13,7 @@
             <SocialIcon img="in50" alt="Linkedin" link="https://www.linkedin.com/in/axel-hayalian/"/>
             <SocialIcon img="git50" alt="GitHub" link="https://github.com/dashboard"/>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>
